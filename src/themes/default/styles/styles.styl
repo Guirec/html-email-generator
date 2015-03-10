@@ -1,89 +1,86 @@
-// Prevent Webkit and Windows Mobile platforms from changing default font sizes
-body
+// Force Outlook.com to display emails at full width
+.ExternalClass
+    display block !important
     width 100%
-    margin 0
-    padding 0
-    -webkit-text-size-adjust 100%
-    -ms-text-size-adjust 100%
 
-// Some trouble with iOS who creates blue links over phone numbers, dates and addresses ?
-// Check that: https://litmus.com/blog/remove-blue-links-ios
-a
-    text-decoration underline
-    color #4b85bd
+// Forces Outlook.com to display normal line spacing
+// More on that: http://www.emailonacid.com/forum/viewthread/43
+.ExternalClass
+.ExternalClass p
+.ExternalClass span
+.ExternalClass font
+.ExternalClass td
+.ExternalClass div
+    line-height 100%
 
+//
+// Media queries
+//
+
+// French specific: Useless media querie to prevent the first media querie to be ignored on LaPoste Mobile web client
+@media screen and (max-width: 0)
+    body
+        margin 0
+
+@media screen and (max-width: 600px)
+    // French specific: All properties must set to !important for the first specification to not be ignored on LaPoste, Orange, SFR and Voilà web client
     img
-        border none
+        width 100% !important
+        max-width 100% !important
+        height auto !important
 
-// Some sensible defaults for images
-img
-    text-decoration none
-    outline none
-    -ms-interpolation-mode bicubic
+    .container
+        width 95% !important
 
-// Gmail and Outlook.com unwantedly adds in an extra space below images when using non IE browsers
-// You may not always want all of your images to be block elements
-// Apply the "image_fix" class to any image you need to fix
-.image_fix
-    display block
+    // Force container columns to (horizontal) blocks
+    .force-col
+        display block
+        padding-right 0 !important
 
-// resolves webkit padding issue
-table
-    border-spacing 0
 
-    // Outlook 07, 10 Padding issue fix
-    td
-        vertical-align top
-        border-collapse collapse
+    .separator
+        display none
 
-body
-.wrapper
-.center
-.footer
-    background-color #ebebeb
 
-.center
-    padding 20px 0
+    .col
+        // Unset table align="left/right"
+        float none !important
+        width 100% !important
 
-.container
-    font-family Arial, sans-serif
+        // Change left/right padding and margins to top/bottom ones
+        margin-bottom 10px !important
+        padding-bottom 10px !important
+        border-bottom 1px solid #ebebeb
 
-.content
-    padding 20px 25px
-    font-size 14px
-    line-height 20px
-    color #333333
-    background-color #ffffff
 
-.title
-    font-size 18px
-    font-weight bold
-    line-height 24px
-    color #c21f52
+    // Remove bottom border for last column/row
+    #last-col-2
+    #last-col-3
+        border-bottom none !important
+        margin-bottom 0
 
-.subtitle
-    font-size 15px
-    font-weight bold
-    line-height 20px
-    color #c21f52
 
-.code
-    font-family Andale Mono, Courier, monospace
-    color #666666
+    // Align images right and shrink them a bit
+    .col-3-img
+        float right
+        margin-left 5px
+        width 130px
 
-.force-col
-    padding-right 20px
 
-    &:last-child
-        padding-right 0
+    // Align images right and shrink them proportionally
+    .col-2-img
+        float right
+        margin-left 5px
+        width 45%
 
-.footer
-    padding 10px 25px 0
-    font-size 12px
-    line-height 15px
-    text-align center
-    color #9f9f9f
 
-    a
-        text-decoration none
-        color #7d7d7d
+// Give content more room on mobile
+@media screen and (max-width: 480px)
+    .content
+        padding-left 10px !important
+        padding-right 10px !important
+
+
+    // Return to the above and take all the available space
+    .col-2-img
+        width 100% !important
