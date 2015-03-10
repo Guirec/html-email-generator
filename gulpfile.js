@@ -43,8 +43,8 @@ gulp.task('emails', ['styles'], function() {
 
 // Watch
 gulp.task('watch', function() {
-    gulp.watch(sourcePath + '/emails/**/*.jade', ['emails']);
-    gulp.watch(sourcePath + '/themes/**/*.styl', ['styles']);
+    gulp.watch(sourcePath + '/**/*.jade', ['emails']);
+    gulp.watch(sourcePath + '/themes/**/*.styl', ['emails']);
 });
 
 gulp.task('default', ['watch', 'emails']);
