@@ -1,0 +1,21 @@
+block theme
+block vars
+
+block html
+    doctype html
+    html
+        head
+            title #{title}
+            meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+            meta(name='viewport', content='width=device-width, initial-scale=1.0')
+            link(href='../themes/#{theme}/styles/styles.min.css', rel='stylesheet')
+            style(type='text/css')
+                include styles/inline.min.css
+        body
+            table.wrapper(width='100%', height='100%', cellpadding='0', cellspacing='0', border='0', bgcolor='#ebebeb')
+                tr
+                    td.center(align='center' valign='top' bgcolor='#ebebeb')
+                        table.container(width='600', cellpadding='0', cellspacing='0', border='0', bgcolor='#ffffff')
+                            tr
+                                td.container-inner(align='left', valign='top', bgcolor='#ffffff')
+                                    block content

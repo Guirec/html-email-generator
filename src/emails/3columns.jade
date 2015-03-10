@@ -1,0 +1,80 @@
+extends ../theme
+
+block vars
+    - var title = 'Responsive Email Boilerplate'
+
+block content
+    div.title Responsive Email Boilerplate
+    br
+
+    | Ce template est une base de travail lorsque l'on souhaite construire un mod&egrave;le pour des emailings. Ce dernier s'adapte aux mobiles en mixant design fluide et adaptatif.
+
+    br
+    br
+
+    | Un jeu de tableaux permet de centrer la zone de contenu. La balise <span class="code">&lt;table&gt;</span> poss&eacute;dant une largeur de 100% permet de garantir que la zone de contenu sera centr&eacute;e m&ecirc;me sur les clients qui suppriment la balise <span class="code">&lt;body&gt;</span>.
+
+    br
+    br
+
+    | La balise <span class="code">&lt;table&gt;</span> avec la classe <span class="code">container</span> fonctionne de la mani&egrave;re suivante :
+
+    br
+    br
+
+    strong Sur ordinateur :
+    ul
+        li Elle encadre le contenu &agrave; la largeur maximum conseill&eacute;e de <span class="code">600px</span>
+        li Un padding de <span class="code">25px</span> est appliqu&eacute; sur la gauche et la droite, ce qui signifie que le contenu occupe une place r&eacute;elle de <span class="code">550px</span>
+
+    strong Sur mobile :
+    ul
+        li La zone de contenu devient fluide et prend une largeur de <span class="code">95%</span>
+        li En de&ccedil;a de <span class="code">480px</span> de largeur, le padding passe &agrave; <span class="code">10px</span> sur la gauche et la droite
+    br
+
+    div.title Une image occupant toute la largeur
+    br
+
+    img(src='http://placehold.it/550x120', alt='', border='0')
+
+    br
+    br
+
+    div.title Utilisation de colonnes pour la mise en forme de contenus
+    br
+
+    table(width='100%', border='0', cellpadding='0', cellspacing='0')
+        tr
+            td.force-col(valign='top')
+                table.col(border='0', cellspacing='0', cellpadding='0', width='170', align='left')
+                    tr
+                        td(align='left', valign='top')
+                            img.col-3-img(src='http://placehold.it/170x130', alt='', border='0')
+
+                            div.subtitle
+                                a(href='#') Lorem ipsum
+
+                            | Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet&hellip;
+
+            td.force-col(valign='top')
+                table.col(border='0', cellspacing='0', cellpadding='0', width='170', align='left')
+                    tr
+                        td(align='left', valign='top')
+                            img.col-3-img(src='http://placehold.it/170x130', alt='', border='0')
+
+                            div.subtitle
+                                a(href='#') Lorem ipsum
+
+                            | Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet&hellip;
+
+            td.force-col(valign='top')
+                table#last-col-3.col(border='0', cellspacing='0', cellpadding='0', width='170', align='left')
+                    tr
+                        td(align='left', valign='top')
+                            img.col-3-img(src='http://placehold.it/170x130', alt='', border='0')
+
+                            div.subtitle
+                                a(href='#') Lorem ipsum
+
+                            | Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet&hellip;
