@@ -47,4 +47,5 @@ gulp.task('watch', function() {
     gulp.watch(sourcePath + '/themes/**/*.styl', ['emails']);
 });
 
+// Default
 gulp.task('default', ['watch', 'emails']);
