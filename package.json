@@ -13,10 +13,10 @@
     "url": "https://github.com/Guirec/HTML-Email-Generator/issues"
   },
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-stylus": "^2.0.1",
-    "gulp-rename": "^1.2.0",
-    "gulp-jade": "^1.0.0",
-    "gulp-inline-css": "^2.0.0"
+    "gulp": "^3.9.0",
+    "gulp-inline-css": "^2.0.0",
+    "gulp-jade": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.0.4"
   }
 }
