@@ -1,0 +1,163 @@
+/*
+ * These styles will be inlined
+ * ----------------------------------------------------------------------- */
+
+/* Generic */
+
+body {
+  margin: 0;
+  mso-line-height-rule: exactly;
+}
+
+a {
+  text-decoration: none;
+  color: #4b85bd;
+}
+
+a img {
+  border: none;
+}
+
+/* Description */
+
+.description {
+  display: none;
+  font-size: 1px;
+  line-height: 1px;
+  max-height: 0px;
+  max-width: 0px;
+  opacity: 0;
+  overflow: hidden;
+  mso-hide: all;
+  font-family: sans-serif;
+}
+
+/* Container */
+
+.container {
+  margin: auto;
+  font-family: sans-serif;
+}
+
+/* Logo */
+
+.logo {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo img {
+  display: block;
+  height: auto;
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: #555555;
+}
+
+/* Jumbotron */
+
+.jumbotron img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Content */
+
+.text {
+  padding: 20px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.text-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.text-code {
+  font-family: Andale Mono, Courier, monospace;
+}
+
+/* Button */
+
+.button-td {
+  text-align: center;
+  background: #222222;
+  border-radius: 3px;
+}
+
+.button-a {
+  display: block;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-decoration: none;
+  text-align: center;
+  background: #222222;
+  border: 15px solid #222222;
+  border-width: 15px 30px;
+  border-radius: 3px;
+}
+
+.button-link {
+  color: #ffffff;
+}
+
+/* Columns */
+
+.columns {
+  padding: 10px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.columns-title {
+  padding: 0 20px;
+}
+
+.column-img {
+  padding: 10px;
+}
+
+.column-img img {
+  display: block;
+}
+
+.column-title {
+  padding: 0 10px 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.column-txt {
+  padding: 0 10px 10px;
+}
+
+/* Notes */
+
+.notes {
+  padding: 10px 20px 20px;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #9f9f9f;
+}
+
+.notes a {
+  text-decoration: none;
+  color: #7d7d7d;
+}

@@ -1,0 +1,136 @@
+/*
+ * Specific to email clients
+ * ----------------------------------------------------------------------- */
+
+/* Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. */
+* {
+  font-family: sans-serif !important;
+}
+
+/* Remove spaces around the email design added by some email clients. */
+/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+html,
+body {
+  margin: 0 auto !important;
+  padding: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* Stops email clients resizing small text. */
+* {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+  margin: 0 !important;
+}
+
+/* Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+  mso-table-lspace: 0pt !important;
+  mso-table-rspace: 0pt !important;
+}
+
+/* Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+  margin: 0 auto !important;
+}
+table table table {
+  table-layout: auto; 
+}
+
+/* Uses a better rendering method when resizing images in IE. */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* A work-around for iOS meddling in triggered links. */
+.mobile-link--footer a,
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: underline !important;
+}
+
+/* Prevents underlining the button text in Windows 10 */
+.button-link {
+  text-decoration: none !important;
+}
+
+/* Removes right gutter in Gmail iOS app */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+  .container {
+    min-width: 375px !important;
+  }
+}
+
+
+/*
+ * Progressive Enhancements
+ * ----------------------------------------------------------------------- */
+
+/* Hover styles for buttons */
+
+.button-td,
+.button-a {
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+.button-td:hover,
+.button-a:hover {
+  background: #555555 !important;
+  border-color: #555555 !important;
+}
+
+/* Media Queries */
+
+/* French specific: Useless media querie to prevent the first media querie to be ignored on LaPoste Mobile web client. Also, for the first specification all properties must set to !important to not be ignored on LaPoste, Orange, SFR and Voilà web client */
+@media screen and (max-width: 0) {
+    body {
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100% !important;
+    margin: auto !important;
+  }
+
+  /* Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+  .fluid {
+    max-width: 100% !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Forces table cells into full-width rows. */
+  .column {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+/* Give content more room on mobile */
+@media screen and (max-width: 480px) {
+  .content,
+  .columns-title {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .columns {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

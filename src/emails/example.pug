@@ -1,0 +1,100 @@
+extends ../theme
+
+block vars
+  - var title = 'Responsive Email Boilerplate'
+
+block content
+  tr
+    td.jumbotron(align='center', valign='top', bgcolor='#ffffff')
+      img(src='http://placehold.it/600x200', width='600', height='200', alt='Alternative text', border='0')
+  tr
+    td.text(align='left', valign='top', bgcolor='#ffffff')
+      div.text-title Responsive Email Boilerplate
+      br
+
+      | This template is a working basis when you want to build a template for emailings. Here's how it adapts to mobile phones:
+
+      br
+      br
+
+      strong On computer:
+      ul
+          li The maximum width is set at <span class="text-code">600px</span>
+          li A padding of <span class="text-code">20px</span> is applied on the left and right, which means that the content occupies a actual width of <span class="text-code">560px</span>
+
+      strong On phone:
+      ul
+          li The content area becomes fluid and occupies 100% <span class="text-code">100%</span> of the width
+          li Below a width of <span class="text-code">480px</span>, the padding is then <span class="text-code">10px</span> on the left and right
+          li Images size decrease according to the available width
+          li Columns are placed one below the other
+      br
+
+      table(role='presentation', cellspacing='0', cellpadding='0', border='0', align='center')
+        tr
+          td.button-td
+            a.button-a(href='http://www.google.com')
+              span.button-link A button
+  tr
+    td.columns(align='left', valign='top', bgcolor='#ffffff')
+      table(role='presentation', width='100%', border='0', cellpadding='0', cellspacing='0')
+        tr
+          td.column(valign='top')
+            table(cellspacing='0', cellpadding='0', border='0')
+              tr
+                td.column-img(valign='top')
+                  img.fluid(src='http://placehold.it/270x190', alt='Alternative text', border='0')
+              tr
+                td.column-title(valign='top')
+                  | Lorem ipsum
+              tr
+                td.column-txt(valign='top')
+                  | Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet&hellip;
+          td.column(valign='top')
+            table(cellspacing='0', cellpadding='0', border='0')
+              tr
+                td.column-img(valign='top')
+                  img.fluid(src='http://placehold.it/270x190', alt='Alternative text', border='0')
+              tr
+                td.column-title(valign='top')
+                  | Lorem ipsum
+              tr
+                td.column-txt(valign='top')
+                  | Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet&hellip;
+  tr
+    td.columns(align='left', valign='top', bgcolor='#ffffff')
+      table(role='presentation', width='100%', border='0', cellpadding='0', cellspacing='0')
+        tr
+          td.column(valign='top')
+            table(cellspacing='0', cellpadding='0', border='0')
+              tr
+                td.column-img(valign='top')
+                  img.fluid(src='http://placehold.it/170x170', alt='Alternative text', border='0')
+              tr
+                td.column-title(valign='top')
+                  | Lorem ipsum
+              tr
+                td.column-txt(valign='top')
+                  | Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet&hellip;
+          td.column(valign='top')
+            table(cellspacing='0', cellpadding='0', border='0')
+              tr
+                td.column-img(valign='top')
+                  img.fluid(src='http://placehold.it/170x170', alt='Alternative text', border='0')
+              tr
+                td.column-title(valign='top')
+                  | Lorem ipsum
+              tr
+                td.column-txt(valign='top')
+                  | Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet&hellip;
+          td.column(valign='top')
+            table(cellspacing='0', cellpadding='0', border='0')
+              tr
+                td.column-img(valign='top')
+                  img.fluid(src='http://placehold.it/170x170', alt='Alternative text', border='0')
+              tr
+                td.column-title(valign='top')
+                  | Lorem ipsum
+              tr
+                td.column-txt(valign='top')
+                  | Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet&hellip;

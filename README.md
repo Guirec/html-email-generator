@@ -1,2 +1,2 @@
 # HTML-Email-Generator
-Generate HTML emails using Jade and Gulp for automation
+Generate HTML emails using Pug and Gulp for automation

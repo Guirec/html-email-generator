@@ -1,7 +1,7 @@
 {
   "name": "HTML-Email-Generator",
-  "version": "0.1.0",
-  "description": "Generate HTML emails using Jade and Gulp for automation",
+  "version": "0.2.0",
+  "description": "Generate HTML emails using Pug and Gulp for automation",
   "author": "Guirec Lefort",
   "license": "MIT",
   "main": "gulpfile.js",
@@ -12,11 +12,16 @@
   "bugs": {
     "url": "https://github.com/Guirec/HTML-Email-Generator/issues"
   },
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.3.2",
     "gulp-inline-css": "^3.1.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-stylus": "^2.3.1"
+    "gulp-pug": "^3.2.0",
+    "gulp-rename": "^1.2.2"
   }
 }
